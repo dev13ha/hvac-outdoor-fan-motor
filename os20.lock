@@ -1,0 +1,11 @@
+format = 1
+
+[[package]]
+name = "@hvac/outdoor-fan"
+version = "1.0.0"
+source = "registry"
+repository = "https://github.com/dev13ha/hvac-outdoor-fan"
+commit = "6c20eb28e4fd98a8f6414f37d37e41f2db7f9909"
+tree = "c75ea3463d7b517f1e9b00ecc4ca62bb519a4fd3"
+manifest_digest = "sha256:c2ad891c5ffaf53cad4319cbbc048d22c5f70399d44dd488aa90c8de1c72785d"
+dependencies = []
