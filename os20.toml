@@ -1,0 +1,8 @@
+[package]
+name = "@hvac/outdoor-fan-motor"
+version = "1.0.0"
+edition = "2026"
+description = "Outdoor fan motor. Geometry is 20. Fan motor.SLDPRT. The fan (1. Outdoor fan.SLDPRT) is a dependency of this motor."
+
+[dependencies]
+"@hvac/outdoor-fan" = "@hvac/outdoor-fan@^1.0"

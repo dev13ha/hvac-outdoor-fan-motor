@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- @hvac/outdoor-fan-motor. Sends shaft events to the fan dependency. -->
+<scxml xmlns="http://www.w3.org/2005/07/scxml"
+       version="1.0"
+       datamodel="ecmascript"
+       initial="off"
+       name="OutdoorFanMotor">
+  <datamodel>
+    <data id="windingC" expr="25"/>
+  </datamodel>
+
+  <state id="off">
+    <transition event="unit.run_fan" target="starting"/>
+  </state>
+
+  <state id="starting">
+    <onentry>
+      <!-- OutdoorAxialFan listens for shaft.torque. -->
+      <send event="shaft.torque"/>
+    </onentry>
+    <transition event="fan.driving" target="running"/>
+    <transition event="fan.stalled" target="thermal_cutout"/>
+    <transition event="unit.stop_fan" target="off"/>
+  </state>
+
+  <state id="running">
+    <onentry>
+      <send event="fan_motor.running"/>
+    </onentry>
+    <transition event="winding.overtemp" target="thermal_cutout" cond="windingC &gt; 130"/>
+    <transition event="unit.stop_fan" target="coasting"/>
+  </state>
+
+  <state id="coasting">
+    <onentry>
+      <send event="shaft.coast"/>
+    </onentry>
+    <transition event="fan.stopped" target="off"/>
+  </state>
+
+  <state id="thermal_cutout">
+    <onentry>
+      <send event="shaft.coast"/>
+      <send event="fan_motor.fault"/>
+    </onentry>
+    <transition event="winding.cool" target="off"/>
+  </state>
+</scxml>

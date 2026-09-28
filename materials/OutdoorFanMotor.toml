@@ -1,0 +1,40 @@
+# Material artifact for @hvac/outdoor-fan-motor.
+# The fan impeller is a package dependency (@hvac/outdoor-fan), not a constituent here.
+
+[assembly]
+package = "@hvac/outdoor-fan-motor"
+part = "MatchedFanMotor"
+cad = "20. Fan motor.SLDPRT"
+unit_mass_kg = 2.4
+poles = 6
+rated_power_w = 60
+rated_rpm = 850
+
+[[constituent]]
+id = "stator"
+sysml_part = "ElectricalSteelStack"
+material = "electrical steel"
+grade = "M470-50A"
+role = "stator laminations"
+mass_kg = 0.95
+density_g_cm3 = 7.70
+thickness_mm = 0.50
+
+[[constituent]]
+id = "winding"
+sysml_part = "CopperWinding"
+material = "copper"
+grade = "C11000"
+role = "magnet wire"
+mass_kg = 0.42
+density_g_cm3 = 8.89
+thermal_class = "F"
+
+[[constituent]]
+id = "housing"
+sysml_part = "AluminumHousing"
+material = "aluminum"
+grade = "A380 die cast"
+role = "motor shell"
+mass_kg = 0.85
+density_g_cm3 = 2.74
