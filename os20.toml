@@ -19,7 +19,7 @@ target = "os20:@hvace/outdoor-fan-motor"
 [artifacts.source]
 provider = "github"
 repo = "dev13ha/hvac-outdoor-fan-motor"
-revision = "b4ce5ed514e07cf51de3e1269f750dc6272549fc"
+revision = "04414727e39999a3a470d3a300e4632a26a0e736"
 path = "20. Fan motor.SLDPRT"
 
 [[artifacts]]
@@ -34,7 +34,7 @@ target = "os20:@hvace/outdoor-fan-motor"
 [artifacts.source]
 provider = "github"
 repo = "dev13ha/hvac-outdoor-fan-motor"
-revision = "b4ce5ed514e07cf51de3e1269f750dc6272549fc"
+revision = "04414727e39999a3a470d3a300e4632a26a0e736"
 path = "model/OutdoorFanMotor.sysml"
 
 [[artifacts]]
@@ -49,7 +49,7 @@ target = "os20:@hvace/outdoor-fan-motor"
 [artifacts.source]
 provider = "github"
 repo = "dev13ha/hvac-outdoor-fan-motor"
-revision = "b4ce5ed514e07cf51de3e1269f750dc6272549fc"
+revision = "04414727e39999a3a470d3a300e4632a26a0e736"
 path = "behavior/OutdoorFanMotor.scxml"
 
 [[artifacts]]
@@ -64,5 +64,5 @@ target = "os20:@hvace/outdoor-fan-motor"
 [artifacts.source]
 provider = "github"
 repo = "dev13ha/hvac-outdoor-fan-motor"
-revision = "b4ce5ed514e07cf51de3e1269f750dc6272549fc"
+revision = "04414727e39999a3a470d3a300e4632a26a0e736"
 path = "materials/OutdoorFanMotor.toml"
