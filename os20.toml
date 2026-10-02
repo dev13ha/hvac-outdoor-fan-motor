@@ -1,0 +1,68 @@
+[package]
+name = "@hvace/outdoor-fan-motor"
+version = "1.0.1"
+edition = "2026"
+description = "Outdoor fan motor. Depends on the outdoor fan."
+
+[dependencies]
+"@hvace/outdoor-fan" = "@hvace/outdoor-fan@^1.0"
+
+[[artifacts]]
+name = "motor-geometry"
+kind = "geometry"
+format = "sldprt"
+
+[artifacts.semantic]
+relation = "core:represents"
+target = "os20:@hvace/outdoor-fan-motor"
+
+[artifacts.source]
+provider = "github"
+repo = "dev13ha/hvac-outdoor-fan-motor"
+revision = "PUT_THE_COMMIT_SHA_HERE"
+path = "20. Fan motor.SLDPRT"
+
+[[artifacts]]
+name = "motor-model"
+kind = "model"
+format = "sysml"
+
+[artifacts.semantic]
+relation = "core:describes"
+target = "os20:@hvace/outdoor-fan-motor"
+
+[artifacts.source]
+provider = "github"
+repo = "dev13ha/hvac-outdoor-fan-motor"
+revision = "PUT_THE_COMMIT_SHA_HERE"
+path = "model/OutdoorFanMotor.sysml"
+
+[[artifacts]]
+name = "motor-behavior"
+kind = "behavior"
+format = "scxml"
+
+[artifacts.semantic]
+relation = "core:simulates"
+target = "os20:@hvace/outdoor-fan-motor"
+
+[artifacts.source]
+provider = "github"
+repo = "dev13ha/hvac-outdoor-fan-motor"
+revision = "PUT_THE_COMMIT_SHA_HERE"
+path = "behavior/OutdoorFanMotor.scxml"
+
+[[artifacts]]
+name = "motor-materials"
+kind = "materials"
+format = "toml"
+
+[artifacts.semantic]
+relation = "core:specifies"
+target = "os20:@hvace/outdoor-fan-motor"
+
+[artifacts.source]
+provider = "github"
+repo = "dev13ha/hvac-outdoor-fan-motor"
+revision = "PUT_THE_COMMIT_SHA_HERE"
+path = "materials/OutdoorFanMotor.toml"
