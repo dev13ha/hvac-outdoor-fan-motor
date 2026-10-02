@@ -1,0 +1,67 @@
+format = 1
+
+[[package]]
+name = "@hvace/outdoor-fan"
+version = "1.0.1"
+source = "registry"
+repository = "https://github.com/dev13ha/hvac-outdoor-fan"
+commit = "49600f703ff6f84b07a2cd6a1b1706f52f003637"
+tree = "fc299197baba029df7939755f2f56d2d66d76794"
+manifest_digest = "sha256:2d770d1d18598aef8db5bbf8ecfce64db9e7859e342a20325e4745e011ec87e3"
+dependencies = []
+
+[[package.semantic_artifact]]
+name = "fan-behavior"
+kind = "behavior"
+format = "scxml"
+relation = "core:simulates"
+target = "os20:@hvace/outdoor-fan"
+provider = "github"
+repo = "dev13ha/hvac-outdoor-fan"
+repository = "https://github.com/dev13ha/hvac-outdoor-fan.git"
+revision = "6c20eb28e4fd98a8f6414f37d37e41f2db7f9909"
+object = "59f4663508c57696a1cea0860454258c952b0ee8"
+object_kind = "blob"
+path = "behavior/OutdoorFan.scxml"
+
+[[package.semantic_artifact]]
+name = "fan-geometry"
+kind = "geometry"
+format = "sldprt"
+relation = "core:represents"
+target = "os20:@hvace/outdoor-fan"
+provider = "github"
+repo = "dev13ha/hvac-outdoor-fan"
+repository = "https://github.com/dev13ha/hvac-outdoor-fan.git"
+revision = "6c20eb28e4fd98a8f6414f37d37e41f2db7f9909"
+object = "06bae7e91d77cc9a33e4c85da893c133032b45c6"
+object_kind = "blob"
+path = "1. Outdoor fan.SLDPRT"
+
+[[package.semantic_artifact]]
+name = "fan-materials"
+kind = "materials"
+format = "toml"
+relation = "core:specifies"
+target = "os20:@hvace/outdoor-fan"
+provider = "github"
+repo = "dev13ha/hvac-outdoor-fan"
+repository = "https://github.com/dev13ha/hvac-outdoor-fan.git"
+revision = "6c20eb28e4fd98a8f6414f37d37e41f2db7f9909"
+object = "c82ad18c321cdf2f1de8bd2e372ff1e895f9cb8b"
+object_kind = "blob"
+path = "materials/OutdoorFan.toml"
+
+[[package.semantic_artifact]]
+name = "fan-model"
+kind = "model"
+format = "sysml"
+relation = "core:describes"
+target = "os20:@hvace/outdoor-fan"
+provider = "github"
+repo = "dev13ha/hvac-outdoor-fan"
+repository = "https://github.com/dev13ha/hvac-outdoor-fan.git"
+revision = "6c20eb28e4fd98a8f6414f37d37e41f2db7f9909"
+object = "92b93241e753a65cce418274446b82fefd7aa855"
+object_kind = "blob"
+path = "model/OutdoorFan.sysml"
