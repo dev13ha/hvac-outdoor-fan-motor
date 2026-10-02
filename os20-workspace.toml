@@ -1,0 +1,5 @@
+[workspace]
+members = [
+  ".",
+  "/home/hp-linux/os20 org/others/Pacakges os20/fan",
+]
