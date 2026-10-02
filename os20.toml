@@ -1,6 +1,6 @@
 [package]
 name = "@hvace/outdoor-fan-motor"
-version = "1.0.1"
+version = "1.0.2"
 edition = "2026"
 description = "Outdoor fan motor. Depends on the outdoor fan."
 
